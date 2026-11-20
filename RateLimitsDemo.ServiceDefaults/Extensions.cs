@@ -56,9 +56,7 @@ public static class Extensions
             {
                 metrics.AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddRuntimeInstrumentation()
-                    .AddMeter("RateLimitsDemo.RateLimitTelemetry")
-                    .AddMeter("Microsoft.AspNetCore.RateLimiting");
+                    .AddRuntimeInstrumentation();
             })
             .WithTracing(tracing =>
             {

@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 
 namespace RateLimitsDemo.Controllers;
@@ -13,7 +12,6 @@ public class WeatherReadingsController(WeatherDb db) : ControllerBase
     private static readonly string[] Summaries = ["Freezing", "Cool", "Mild", "Warm", "Hot"];
 
     [HttpPost]
-    [EnableRateLimiting("db-pool")]
     public async Task<IActionResult> Record()
     {
         // The transaction keeps one pooled connection checked out for the whole request

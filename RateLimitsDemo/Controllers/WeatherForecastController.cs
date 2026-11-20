@@ -1,13 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.RateLimiting;
 
 namespace RateLimitsDemo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 [AllowAnonymous]
-[EnableRateLimiting("per-client")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries =
