@@ -1,0 +1,5 @@
+{
+  "appHost": {
+    "path": "RateLimitsDemo.AppHost/RateLimitsDemo.AppHost.csproj"
+  }
+}
